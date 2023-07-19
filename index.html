@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Gamapana Pizza</title>
+	<!-- Verdana font -->
+	<style>
+		body {
+			font-family: Verdana, sans-serif;
+			background-color: #fff;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: bold;
+		}
+		.container {
+			width: 960px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.header {
+			background-color: #f2c20f;
+			text-align: center;
+			padding: 20px;
+		}
+		.header h1 {
+			font-size: 48px;
+			margin: 0;
+			line-height: 1.2;
+		}
+		.header img {
+			max-width: 100%;
+			height: auto;
+			margin-top: 20px;
+		}
+		.navigation {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.navigation ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+		.navigation li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+		.navigation a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 24px;
+			padding: 10px;
+			transition: all 0.3s ease;
+		}
+		.navigation a:hover {
+			background-color: #f2c20f;
+			color: #333;
+			border-radius: 5px;
+		}
+		.content {
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		.featured-pizza {
+			display: flex;
+			align-items: center;
+			margin-bottom: 40px;
+		}
+		.featured-pizza img {
+			flex: 1;
+			margin-right: 20px;
+		}
+		.featured-pizza .description {
+			flex: 2;
+		}
+		.featured-pizza h3 {
+			font-size: 36px;
+			margin: 0;
+			line-height: 1.2;
+		}
+		.featured-pizza p {
+			font-size: 24px;
+			margin-bottom: 20px;
+			line-height: 1.5;
+		}
+		.newsletter-form {
+			display: flex;
+			align-items: center;
+			margin-bottom: 40px;
+		}
+		.newsletter-form label {
+			font-size: 24px;
+			margin-right: 20px;
+		}
+		.newsletter-form input[type="email"] {
+			flex: 1;
+			font-size: 24px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+		.newsletter-form button {
+			font-size: 24px;
+			padding: 10px 20px;
+			background-color: #f2c20f;
+			color: #333;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.newsletter-form button:hover {
+			background-color: #333;
+			color: #fff;
+		}
+		.footer {
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Header -->
+	<div class="header">
+		<div class="container">
+			<h1>Gamapana Pizza</h1>
+			<img src="logo.png" alt="Gamapana Pizza Logo">
+			<p>Authentic Italian Pizza in the heart of the New York City</p>
+		</div>
+	</div>
+	
+	<!-- Navigation -->
+	<div class="navigation">
+		<div class="container">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">Locations</a></li>
+				<li><a href="#">Contact Us</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<!-- Main Content -->
+	<div class="content">
+		<div class="container">
+			<h2>Welcome to Gamapana Pizza</h2>
+			<p>We are a family-owned pizzeria serving authentic Italian pizza made with fresh ingredients and traditional recipes. Come visit us and taste the difference!</p>
+			<div class="featured-pizza">
+				<img src="pizza.jpg" alt="Featured Pizza">
+				<div class="description">
+					<h3>Featured Pizza</h3>
+					<p>Try our Margherita Pizza, made with fresh mozzarella, San Marzano tomatoes, and basil. It's a classic for a reason!</p>
+					<p>Available in small, medium, and large sizes starting at $10.99.</p>
+				</div>
+			</div>
+			<div class="newsletter-form">
+				<form>
+					<label for="email">Sign up for our newsletter:</label>
+					<input type="email" id="email" name="email" placeholder="Enter your email address" required>
+					<button type="submit">Sign Up</button>
+				</form>
+			</div>
+			<p>You can be the first to know about our new cool stuff!</p>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<p>&copy; 2009 Gamapana Pizza. All rights reserved.</p>
+		</div>
+	</div>
+	
+	<!-- jQuery code for email signup -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('form').submit(function(event) {
+				event.preventDefault();
+				var email = $('#email').val();
+				alert('Thank you for signing up for our newsletter, ' + email + '!');
+			});
+		});
+	</script>
+</body>
+</html>
